@@ -26,9 +26,26 @@ services.forEach((service) => {
   servicesElm.append(article);
 });
 
-//===>
+//===>virker ikke mangler headline og options
 
     let facilitiesElm = document.querySelector(".facilities");
-    facilities.forEach((facility) => {
-        
-    })
+    let facilitiesHeader = document.createElement("h2");
+    facilitiesHeader.textContent = facility.headline;
+    facilitiesElm.append(facilitiesHeader);
+
+    let facilitiesList = document.createElement("div");
+    facilitiesList.classListadd("facilities-list");
+    facilities.forEach(facility => {
+        let facilityItem = document.createElement("div");
+        facilityItem.classList.add("facility-item");
+
+
+    facilityItem.innerHTML = `
+    <img src="${facility.icon}" alt="${facility.title}">
+    <h3>${facility.title}</h3>
+    <p>${facility.description}</p>
+    `;
+    facilitiesList.append(facilityItem);
+    facilitiesElm.append(facilitiesList);
+});
+
