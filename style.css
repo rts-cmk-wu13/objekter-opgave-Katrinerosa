@@ -1,0 +1,12 @@
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1440px;
+}
+.hero img {
+  width: 100%;
+  height: 650px;
+}
