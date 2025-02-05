@@ -12,14 +12,14 @@ body {
   max-width: 1440px;
 }
 main {
-  max-width: 1050px;
+  max-width: 1150px;
 }
 h1 {
   font-size: 39px;
 }
 h2 {
   font-size: 36px;
-  margin-top: 2em;
+  /* margin-top: 2em; */
   margin-bottom: 2em;
 }
 h3 {
@@ -101,12 +101,87 @@ h3 {
   width: 325px;
   margin-bottom: 4em;
 }
-.sites__textbox p{
-width: 325px;
+.sites__textbox p {
+  width: 325px;
 }
-.artikel-kasse {
+
+.advantages__container {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  justify-content: space-between; /* Fordeler boksene jævnt */
+  gap: 20px; /* Afstand mellem boksene */
+  padding: 20px 0;
 }
-footer {
-  background-color: #f78065;
+
+.artikel-kasse {
+  flex: 1;
+  min-width: 250px;
+  max-width: 386px;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.artikel-kasse img {
+  width: 32px;
+  height: 32px;
+
+  margin-bottom: 20px;
+}
+
+.artikel-kasse h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.artikel-kasse p {
+  font-size: 14px;
+  color: #555;
+}
+
+.footer {
+  background: #F7F7F7;
+  color: #000;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__section {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+.footer__section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom: 5px;
+}
+
+.footer__section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__section ul li {
+  margin: 5px 0;
+  color: #000;
+}
+
+.footer__section ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer__section ul li a:hover {
+  text-decoration: underline;
 }
