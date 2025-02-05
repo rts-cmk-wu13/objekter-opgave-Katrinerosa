@@ -11,8 +11,11 @@ body {
 .wrapper {
   max-width: 1440px;
 }
+main {
+  max-width: 1050px;
+}
 h1 {
-  font-size: 48px;
+  font-size: 39px;
 }
 h2 {
   font-size: 36px;
@@ -20,7 +23,7 @@ h2 {
   margin-bottom: 2em;
 }
 h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 1.5em;
 }
@@ -29,12 +32,32 @@ h3 {
   height: 650px;
 }
 .boks {
-  background-color: aqua;
-  height: 555px;
-  width: 600px;
+  background-color: #fff;
+  height: 537px;
+  width: 741px;
   position: absolute;
   top: 300px;
   margin-left: 100px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+}
+.boks h1 {
+  padding-top: 96px;
+  max-width: 525px;
+  padding-bottom: 1.5em;
+}
+.boks p {
+  max-width: 515px;
+  height: 96px;
+}
+.explore {
+  color: #fff;
+  width: 250px;
+  height: 60px;
+  margin-left: 100px;
+  background-color: #f78065;
+}
+.explore a {
+  color: #fff;
 }
 .services {
   margin-top: 200px;
@@ -58,23 +81,32 @@ h3 {
 .facilities-list {
   gap: 10px;
   display: flex;
-  
+
   margin-bottom: 200px;
 }
 .sites {
   display: flex;
 }
-.sites h2 {
-  max-width: 325px;
-}
+
 .sites img {
   height: 418px;
   max-width: 230px;
 }
-.artikel-kasse{
-    display: flex;
-    
+.sites__textbox {
+  width: 325px;
+  gap: 20px;
+  top: 100px;
 }
-footer{
-    background-color: #f78065;
+.sites__textbox h2 p {
+  width: 325px;
+  margin-bottom: 4em;
+}
+.sites__textbox p{
+width: 325px;
+}
+.artikel-kasse {
+  display: flex;
+}
+footer {
+  background-color: #f78065;
 }

@@ -56,12 +56,16 @@ facilities.options.forEach((option) => {
 });
 
 let sitesElm = document.querySelector(".sites");
+let sitesTextbox = document.createElement("div");
+sitesTextbox.classList.add("sites__textbox")
+
 let sitesHeader = document.createElement("h2");
 sitesHeader.textContent = sites.headline;
 let sitesParagraph = document.createElement("p");
 sitesParagraph.textContent = sites.text;
 
-sitesElm.append(sitesHeader, sitesParagraph);
+sitesTextbox.append(sitesHeader, sitesParagraph);
+sitesElm.append(sitesTextbox);
 
 sites.places.forEach((place) => {
   let article = document.createElement("article");
