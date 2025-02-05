@@ -57,7 +57,7 @@ facilities.options.forEach((option) => {
 
 let sitesElm = document.querySelector(".sites");
 let sitesTextbox = document.createElement("div");
-sitesTextbox.classList.add("sites__textbox")
+sitesTextbox.classList.add("sites__textbox");
 
 let sitesHeader = document.createElement("h2");
 sitesHeader.textContent = sites.headline;
@@ -93,32 +93,59 @@ sites.places.forEach((place) => {
 });
 
 let advantagesElm = document.querySelector(".advantages");
+
+// Opretter en container til de fire bokse
+let advantagesContainer = document.createElement("div");
+advantagesContainer.classList.add("advantages__container");
+
 advantages.forEach((advantage) => {
   let article = document.createElement("article");
+  article.classList.add("artikel-kasse"); // Tilføjer class
+
   article.innerHTML = `
-  <article class= "artikel-kasse">
-    <img src="${advantage.icon}" alt="">
-    
+    <img src="${advantage.icon}" alt="${advantage.headline}">
     <h3>${advantage.headline}</h3>
     <p>${advantage.text}</p>
-   </article>
+  `;
 
-    `;
-  advantagesElm.append(article);
+  advantagesContainer.append(article); 
 });
 
+
+advantagesElm.append(advantagesContainer);
+
 // ===  FOOTER SEKTION === //
+// Hent footer-elementet
 let footerElm = document.querySelector(".footer");
-let footerDiv = document.createElement("div");
-footerDiv.classList.add("footer-content");
 
-footerDiv.innerHTML = `
-    <p>${footer.text}</p>
-    <ul class="footer-links">
-        ${footer.links
-          .map((link) => `<li><a href="${link.url}">${link.name}</a></li>`)
-          .join("")}
-    </ul>
-`;
+// Opretter en container til footer-indholdet
+let footerContainer = document.createElement("div");
+footerContainer.classList.add("footer__container");
 
-footerElm.append(footerDiv);
+// Gennemløb sektionerne i `footer.sections`
+footer.sections.forEach((section) => {
+    let sectionDiv = document.createElement("div");
+    sectionDiv.classList.add("footer__section");
+
+    // Tilføj overskrift
+    let sectionTitle = document.createElement("h3");
+    sectionTitle.textContent = section.title;
+    sectionDiv.appendChild(sectionTitle);
+
+    // Opret liste over links
+    let ul = document.createElement("ul");
+    section.links.forEach((link) => {
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.href = link.url;
+        a.textContent = link.name;
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
+
+    sectionDiv.appendChild(ul);
+    footerContainer.appendChild(sectionDiv);
+});
+
+// Tilføj containeren til footeren
+footerElm.appendChild(footerContainer);
