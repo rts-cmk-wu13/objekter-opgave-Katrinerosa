@@ -45,10 +45,11 @@ facilities.options.forEach((option) => {
   facilityItem.classList.add("facility-item");
 
   facilityItem.innerHTML = `
-    <div class= "facility-kasser">
+    
         <img src="${option.icon}" alt="${option.title}">
     <h3>${option.headline}</h3>
-    <p>${option.text}</p></div>
+    <p>${option.text}</p>
+
     `;
   facilitiesList.append(facilityItem);
   facilitiesElm.append(facilitiesList);
@@ -57,8 +58,10 @@ facilities.options.forEach((option) => {
 let sitesElm = document.querySelector(".sites");
 let sitesHeader = document.createElement("h2");
 sitesHeader.textContent = sites.headline;
+let sitesParagraph = document.createElement("p");
+sitesParagraph.textContent = sites.text;
 
-sitesElm.append(sitesHeader);
+sitesElm.append(sitesHeader, sitesParagraph);
 
 sites.places.forEach((place) => {
   let article = document.createElement("article");
@@ -84,3 +87,34 @@ sites.places.forEach((place) => {
     `;
   sitesElm.append(article);
 });
+
+let advantagesElm = document.querySelector(".advantages");
+advantages.forEach((advantage) => {
+  let article = document.createElement("article");
+  article.innerHTML = `
+  <article class= "artikel-kasse">
+    <img src="${advantage.icon}" alt="">
+    
+    <h3>${advantage.headline}</h3>
+    <p>${advantage.text}</p>
+   </article>
+
+    `;
+  advantagesElm.append(article);
+});
+
+// ===  FOOTER SEKTION === //
+let footerElm = document.querySelector(".footer");
+let footerDiv = document.createElement("div");
+footerDiv.classList.add("footer-content");
+
+footerDiv.innerHTML = `
+    <p>${footer.text}</p>
+    <ul class="footer-links">
+        ${footer.links
+          .map((link) => `<li><a href="${link.url}">${link.name}</a></li>`)
+          .join("")}
+    </ul>
+`;
+
+footerElm.append(footerDiv);

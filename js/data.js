@@ -96,3 +96,12 @@ let advantages = [
 ]
 
 // Opret dit dataobjekt til footerens indhold herunder
+let footer = {
+    text: "© 2025 EasyCamper. All rights reserved.",
+    links: [
+        { name: "Privacy Policy", url: "#" },
+        { name: "Terms of Service", url: "#" },
+        { name: "Contact", url: "#" }
+    ]
+};
+

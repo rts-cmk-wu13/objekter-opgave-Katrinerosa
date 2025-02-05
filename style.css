@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Merriweather" sans-serif;
+  font-family: "Merriweather", sans-serif;
 }
 .wrapper {
   max-width: 1440px;
@@ -54,13 +54,12 @@ h3 {
 .artikelkasse a {
   color: #f78065;
 }
-.he .facilities {
-}
-.facility-kasser {
+
+.facilities-list {
   gap: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  
+  margin-bottom: 200px;
 }
 .sites {
   display: flex;
@@ -71,4 +70,11 @@ h3 {
 .sites img {
   height: 418px;
   max-width: 230px;
+}
+.artikel-kasse{
+    display: flex;
+    
+}
+footer{
+    background-color: #f78065;
 }
