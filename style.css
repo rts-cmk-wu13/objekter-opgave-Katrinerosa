@@ -1,12 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   margin: auto;
   padding: auto;
   box-sizing: border-box;
 }
+body {
+  font-family: "Merriweather" sans-serif;
+}
 .wrapper {
   max-width: 1440px;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1.5em;
 }
 .hero img {
   width: 100%;
   height: 650px;
+}
+.boks {
+  background-color: aqua;
+  height: 555px;
+  width: 600px;
+  position: absolute;
+  top: 300px;
+  margin-left: 100px;
+}
+.services {
+  margin-top: 200px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.artikelkasse {
+  width: 386px;
+  height: 225px;
+}
+.artikelkasse p {
+  margin-bottom: 1.5em;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+.artikelkasse a {
+  color: #f78065;
+}
+.he .facilities {
+}
+.facility-kasser {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sites {
+  display: flex;
+}
+.sites h2 {
+  max-width: 325px;
+}
+.sites img {
+  height: 418px;
+  max-width: 230px;
 }
