@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Merriweather", sans-serif;
+}
+.wrapper {
+  max-width: 1440px;
+}
+main {
+  max-width: 1050px;
+}
+h1 {
+  font-size: 39px;
+}
+h2 {
+  font-size: 36px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+.hero img {
+  width: 100%;
+  height: 650px;
+}
+.boks {
+  background-color: #fff;
+  height: 537px;
+  width: 741px;
+  position: absolute;
+  top: 300px;
+  margin-left: 100px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+}
+.boks h1 {
+  padding-top: 96px;
+  max-width: 525px;
+  padding-bottom: 1.5em;
+}
+.boks p {
+  max-width: 515px;
+  height: 96px;
+}
+.explore {
+  color: #fff;
+  width: 250px;
+  height: 60px;
+  margin-left: 100px;
+  background-color: #f78065;
+}
+.explore a {
+  color: #fff;
+}
+.services {
+  margin-top: 200px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.artikelkasse {
+  width: 386px;
+  height: 225px;
+}
+.artikelkasse p {
+  margin-bottom: 1.5em;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+.artikelkasse a {
+  color: #f78065;
+}
+
+.facilities-list {
+  gap: 10px;
+  display: flex;
+
+  margin-bottom: 200px;
+}
+.sites {
+  display: flex;
+}
+
+.sites img {
+  height: 418px;
+  max-width: 230px;
+}
+.sites__textbox {
+  width: 325px;
+  gap: 20px;
+  top: 100px;
+}
+.sites__textbox h2 p {
+  width: 325px;
+  margin-bottom: 4em;
+}
+.sites__textbox p{
+width: 325px;
+}
+.artikel-kasse {
+  display: flex;
+}
+footer {
+  background-color: #f78065;
+}
